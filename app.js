@@ -24,6 +24,33 @@
       title: "Express"
     });
   });
+  app.get("/login", function(req, res) {
+    var data;
+    data = {};
+    return res.render("login", {
+      title: "Admin login",
+      data: data
+    });
+  });
+  app.get("/admin", function(req, res) {
+    return res.render("admin", {
+      title: "Admin Page"
+    });
+  });
+  app.post("/login", function(req, res) {
+    var data;
+    if (req.body.password === 'password') {
+      return res.redirect("/admin");
+    } else {
+      data = {
+        error_msg: "error"
+      };
+      return res.render("login", {
+        title: "Admin login",
+        data: data
+      });
+    }
+  });
   app.listen(3000);
   console.log("Express server listening on port %d", app.address().port);
 }).call(this);

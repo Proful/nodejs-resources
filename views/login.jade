@@ -1,0 +1,12 @@
+h1= title
+
+- if (data.error_msg)
+  h2 "Password is not correct"
+
+form#post(action='/login', method='post')
+  p
+    label(for='password') Password:
+    input(type='password', name='password')
+  p
+    input(type='submit', value='Login')
+  

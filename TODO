@@ -1,0 +1,21 @@
+Admin Functionality
+/admin
+prompt for password. After successful password entry to admin page
+
+1. Able to insert a new entry
+(Simple Authorization is required)
+/admin/new
+2. Edit the entry
+/admin/edit/:id
+3. Delete the entry
+/admin/delete/:id
+
+Public Page
+nodejs
+
+title
+embeded code 
+description
+
+
+
